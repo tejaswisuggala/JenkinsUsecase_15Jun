@@ -8,7 +8,7 @@ pipeline {
     stage ('PostBuild') {
       steps {
         UiPathDeploy (
-          packagePath: "D:\Nupkg\Jenkins_Usecase.1.0.1.nupkg",
+          packagePath: "D:\\Nupkg\\Jenkins_Usecase.1.0.1.nupkg",
           orchestratorAddress: "https://cloud.uipath.com/",
           orchestratorTenant: "DefaultTenant",
           folderName: "Practice",
