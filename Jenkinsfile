@@ -11,6 +11,7 @@ pipeline {
           packagePath: "D:\\Nupkg\\Jenkins_Usecase.1.0.1.nupkg",
           orchestratorAddress: "https://cloud.uipath.com/",
           orchestratorTenant: "DefaultTenant",
+          environments: None,
           folderName: "Practice",
           credentials: [$class: $JenkCred, credentialsId: $OrchAPI],
           traceLevel: 'None'
