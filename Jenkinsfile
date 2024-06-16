@@ -5,17 +5,15 @@ pipeline {
       MINOR = '0'
   }
   stages {
-    stage ('Build') {
+    stage ('PostBuild') {
       steps {
-        UiPathPack (
-          outputPath: "D:\\",
-          projectJsonPath: "D:\\UiPath Workspace\\Jenkins_Usecase\\project.json",
-          version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.1"]
-          useOrchestrator: false,
-          traceLoggingLevel: "None",
+        UiPathDeploy (
+          packagePath: "D:\Nupkg\Jenkins_Usecase.1.0.1.nupkg",
           orchestratorAddress: "https://cloud.uipath.com/",
           orchestratorTenant: "DefaultTenant",
-          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: “OrchAPI”]
+          folderName: "Practice",
+          credentials: [$class: $JenkCred, credentialsId: $OrchAPI],
+          traceLoggingLevel: 'None'
         )
       }
     }
