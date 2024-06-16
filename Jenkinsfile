@@ -11,7 +11,7 @@ pipeline {
           outputPath: "D:\\",
           projectJsonPath: "D:\\UiPath Workspace\\Jenkins_Usecase\\project.json",
           version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.1"]
-          useOrchestrator: true,
+          useOrchestrator: false,
           traceLoggingLevel: "None",
           orchestratorAddress: "https://cloud.uipath.com/",
           orchestratorTenant: "DefaultTenant",
