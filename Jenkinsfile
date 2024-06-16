@@ -13,7 +13,7 @@ pipeline {
           orchestratorTenant: "DefaultTenant",
           folderName: "Practice",
           credentials: [$class: $JenkCred, credentialsId: $OrchAPI],
-          traceLoggingLevel: 'None'
+          traceLevel: 'None'
         )
       }
     }
