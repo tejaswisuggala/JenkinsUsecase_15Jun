@@ -15,7 +15,7 @@ pipeline {
 			
 	
 	        // Deploy to Production Step
-	        stage('DeployProcess') {
+	        stage('PostBuild') {
 				
 				steps {
 	                echo 'Deploying process to orchestrator...'
