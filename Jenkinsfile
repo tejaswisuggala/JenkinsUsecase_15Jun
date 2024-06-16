@@ -9,7 +9,7 @@ pipeline {
       steps {
         UiPathDeploy (
           createPtocess: true
-          packagePath: "D:\\Nupkg\\Jenkins_Usecase.1.0.1.nupkg",
+          packagePath: "D:\\Nupkg",
           orchestratorAddress: "https://cloud.uipath.com/",
           orchestratorTenant: "DefaultTenant",
           environments: None,
